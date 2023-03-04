@@ -1,0 +1,12 @@
+<div class="container d-flex flex-column min-vh-100 min-vw-100">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+         <div>
+             <div class=" mb-3">
+                <h2>Thank You for Registering</h2>
+                <p *ngIf="authService.userData as user">We have sent a confirmation email to <strong class="text-primary">{{user.email}}</strong>. <br>
+                    Please check your email and click on the link to verfiy your email address.</p>
+             </div> 
+             <input type="button" style="margin-right: 10px;" class="btn btn-primary" value="Resend verification email" (click)="authService.SendVerificationMail()">
+         </div>
+    </div>
+ </div>

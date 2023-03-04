@@ -1,0 +1,18 @@
+<div class="container d-flex flex-column min-vh-100 min-vw-100">
+   <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+        <div class="">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Email"  #userEmail aria-label="Email" aria-describedby="basic-addon1">
+            </div> 
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">**</span>
+                <input type="password" class="form-control" placeholder="Password" #userPassword aria-label="Password" aria-describedby="basic-addon2">
+            </div>
+            <input type="button" style="margin-right: 10px;" class="btn btn-primary" value="Log in"  (click)="authService.SignIn(userEmail.value, userPassword.value)">
+            <input type="button" class="btn btn-outline-primary" value="Google" (click)="authService.GoogleAuth()">
+            <a class="mx-3 text-primary" routerLink="/forgot-password">Forgot Password?</a>
+            <span class="mx-3 text-primary">Don't have an account? <a class="redirect" routerLink="/register-user"> Sign Up</a></span>        
+        </div>
+   </div>
+</div>
